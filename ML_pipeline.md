@@ -73,9 +73,13 @@ This and others stages added to the pipeline are added to a file _dvc.yaml_.
 
 The command _dvc dag_ exhibits the Data Pipeline or Dependency Graph as illustrated below:
 
-![dvc_dag](https://miro.medium.com/max/875/1*ScpQY04hxoRQ8xtAm7wawg.png)
+![dvc_dag](https://gitlab.sasdigital.com.br/tisas/gremlins/tars/-/raw/feature/ds-problems-list/deploy/dvc_dag.png)
 
 The experimentation and reproducibility is possible with the command _dvc repro_. The former enables the execution of model with different values for
 its parameters, for example, while avoiding unnecessary reruns of stages of the pipeline that didn't change with the new parameters, as they are
 already cached by previous runs. The later allows DVC to pull the correct cached data and model version corresponding to the desired commit or branch
-on Git.
+on Git. The figures below compare two runs with distinct parameters for training.
+
+![dvc_differences](https://gitlab.sasdigital.com.br/tisas/gremlins/tars/-/raw/feature/ds-problems-list/deploy/dvc_differences.png)
+
+![dvc_plot](https://gitlab.sasdigital.com.br/tisas/gremlins/tars/-/raw/feature/ds-problems-list/deploy/dvc_plot.png)
